@@ -20,6 +20,6 @@
 	<gap:platform name="android" />
 	
     <!-- Plugins -->
-    <plugin name="Storage" value="org.apache.cordova.Storage" />
+   <!-- <plugin name="Storage" value="org.apache.cordova.Storage" />-->
 
 </widget>
