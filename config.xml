@@ -19,7 +19,15 @@
 
 	<gap:platform name="android" />
 	
+    <platform name="android">
+              <icon src="icon.png" density="ldpi" />
+              <icon src="icon.png" density="mdpi" />
+              <icon src="icon.png" density="hdpi" />
+              <icon src="icon.png" density="xhdpi" />
+     </platform>
+
+	
     <!-- Plugins -->
-   <!-- <plugin name="Storage" value="org.apache.cordova.Storage" />-->
+    <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
 
 </widget>
