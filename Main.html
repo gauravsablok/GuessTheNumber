@@ -75,6 +75,13 @@ var GridCount = 1;
 var Score = 0;var TotalScore = 0;var TimeBonus =0;var LevelBonus = 0;
 var NumberValue = [];
 var TimeLimit; var CountDownTimer; var OutLineTimeLimit;
+
+function onDeviceReady() 
+{
+    document.addEventListener("backbutton", function (e) {
+        e.preventDefault();
+    }, false );
+}
 function logout()
 {
 	window.location = 'index.html';

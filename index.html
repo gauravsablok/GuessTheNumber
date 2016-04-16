@@ -7,6 +7,16 @@ function callNewPage(PageName)
 {
 	window.location = PageName + '.html';
 }
+function onDeviceReady() 
+{
+    // Register the event listener
+    document.addEventListener("backbutton", onBackKeyDown, false);
+}
+// Handle the back button
+function onBackKeyDown() 
+{
+	logout();
+}
 function logout()
 {
     if (confirm("Logout?") == true) 
