@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.SablokEnt.GuessTheNumber"
+    versionCode = "10"
+    version     = "1.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Guess The Number</name>
+
+    <description>
+      Fill the missing number in the grid such that the mathematical sanctity of the grid is maintained. Ideal for learning basic calulations of Mathematics.
+    </description>
+
+    <author href="https://plus.google.com/102568059178551469997/auto" email="gauravsblk@gmail.com">
+      Gaurav Sablok
+    </author>
+
+	<gap:platform name="android" />
+	
+    <!-- Plugins -->
+    <plugin name="Storage" value="org.apache.cordova.Storage" />
+
+</widget>

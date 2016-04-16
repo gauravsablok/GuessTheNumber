@@ -1,0 +1,103 @@
+<html>
+<head>
+<script src="phonegap.js"></script>
+</head>
+<body>
+<style>
+	#ScoreButton
+	{
+		background-color:black;
+		color: white;
+		height:40%;
+		width:30%;
+		font-size:160%;
+	}
+	.BreakUpButton
+	{
+		background-color:black;
+		color: white;
+		height:100%;
+		width:100%;
+		font-size:90%;
+	}
+</style>
+<script>
+function logout()
+{
+	navigator.app.exitApp();
+}
+function RetrieveScore()
+{
+	var LevelBonus = window.localStorage.getItem("LevelBonus2912");
+	var TimeBonus = window.localStorage.getItem("TimeBonus2912");
+	var BaseScore =window.localStorage.getItem("BaseScore2912");
+	var value = window.localStorage.getItem("HighScore2912");
+	var ScoreArr = new Array();
+	ScoreArr = value.split(';');
+	var CurrentPlayer = ScoreArr[ScoreArr.length-1];
+	var n = CurrentPlayer.lastIndexOf(',');
+	var Score = CurrentPlayer.substring(n + 1);
+	var Name = CurrentPlayer.split(',',1);
+	//alert(Name);
+	document.getElementById('BaseScore').value = BaseScore;
+	document.getElementById('ScoreButton').value = Score;//Total Score
+	document.getElementById('TimeBonus').value = TimeBonus;
+	document.getElementById('LevelBonus').value = LevelBonus;
+	
+	document.getElementById('PN').value = Name;
+	//alert(Score);
+	
+}
+function UpdatePlayerName()
+{
+	var value = window.localStorage.getItem("HighScore");//Full Array
+	var ScoreArr = new Array();
+	ScoreArr = value.split(';');//Splitted full Array
+	var CurrentPlayer = ScoreArr[ScoreArr.length-1];//Name + Score
+	var n = CurrentPlayer.lastIndexOf(',');
+	var Score = CurrentPlayer.substring(n + 1);//Score only
+	var PlayerName = document.getElementById('PN').value;
+	
+	ScoreArr[ScoreArr.length-1] =  PlayerName + ',' + Score;
+	value = ScoreArr.join(";");
+	window.localStorage.setItem("HighScore2912", value);
+	window.location = 'index.html';	
+}
+</script>
+
+<div class = 'Name' style = 'float:top;height:10%;max-height:10%;margin-top:2%;padding-top:6%;display:block'>
+<b>Name:</b>
+<input class = 'PlayerName' id= 'PN' type = "text" placeholder = 'Player1' value = 'Player1' maxlength="10"/>
+</span>
+</div>
+
+<div class = 'ScoreBreakUp' style = 'float:top;height:20%;max-height:20%;margin-top:1%;display:block'>
+	<section style="display: table;">
+	<div style="display: table-row;">
+		<b style='display: table-cell;'>Base Score:</b>
+		<input style='display: table-cell;' type = 'button' class = 'BreakUpButton' id = 'BaseScore' />
+	</div>
+	<div style="display: table-row;">
+		<b style='display: table-cell;'>Time Bonus:</b>
+		<input style='display: table-cell;' type = 'button' class = 'BreakUpButton' id = 'TimeBonus' />
+	</div>
+	<div style="display: table-row;">
+		<b style='display: table-cell;'>Level Bonus:</b>
+		<input  type = 'button' class = 'BreakUpButton' id = 'LevelBonus' />
+	</div>
+	</section>
+</div>
+
+<div class = 'Score' style = 'float:top;height:20%;max-height:20%;margin-top:2%;display:block'>
+<b>Total Score:</b>
+<input type = 'button' class = 'Button' id = 'ScoreButton' />
+</div>
+
+<div class = 'Submit' style = 'float:top;height:15%;max-height:15%;margin-top:1%;display:block'>
+<a onclick = "UpdatePlayerName()" style="margin-left:30%";class = 'Button' id = 'Submit'><IMG style="width:25%;height:100%;max-width:100%;max-height:100%;" src = 'Submit.png' /> </a>
+</div>
+<script>
+RetrieveScore();
+</script>
+</body>
+</html>

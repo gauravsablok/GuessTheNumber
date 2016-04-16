@@ -1,0 +1,170 @@
+<html>
+<head>
+</head>
+<body>
+<style>
+.CellElement
+{
+	text-align:center;
+}
+</style>
+<script>
+function logout()
+{
+	window.location = 'index' + '.html';
+}
+function RetrieveHighScoresAndPopulate()
+{
+	var value = window.localStorage.getItem("HighScore2912");//Full Array
+	var ScoreArr = new Array();
+	ScoreArr = value.split(';');//Splitted full Array
+	HighScores = new Array();
+	PlayerNames = new Array();
+	
+	for(var i =0; i<ScoreArr.length;i++)
+	{
+		var CurrentPlayer = ScoreArr[i];//Name + Score
+		
+		var n = CurrentPlayer.lastIndexOf(',');
+		var Score = CurrentPlayer.substring(n + 1);//Score only
+		var Name = CurrentPlayer.split(',',1);//Name Only
+
+		
+		if(HighScores.length == 0)
+		{
+			HighScores.push(Score);
+			PlayerNames.push(Name);
+		}
+		else if(HighScores.length <= 9)
+		{
+			
+			if(Score <= HighScores[length - 1])
+			{
+				HighScores.push(Score);
+				PlayerNames.push(Name);
+				
+			}
+			else
+			{
+				
+				var MaxPos = 0;
+				for(var j=HighScores.length-1;j>=0;j--)
+				{
+					if(Score <= HighScores[j])
+					{	
+						MaxPos = j+1;	
+						break;
+					}
+				}
+				//Move Array forward by 1
+				HighScores.push(HighScores[HighScores.length-1]);
+				PlayerNames.push(PlayerNames[PlayerNames.length-1]);
+				//Insert the new value and move the value ahead.
+				for(var k=HighScores.length-2;k>MaxPos;k--)
+				{
+					HighScores[k] = HighScores[k-1];
+					PlayerNames[k] = PlayerNames[k-1];
+				}
+
+
+	
+				if(MaxPos<=10)
+				{
+					HighScores[MaxPos] = Score;
+					PlayerNames[MaxPos] = Name;
+				}
+			}
+
+		}
+		else
+		{
+			var MaxPos = 0;
+			for(var j=HighScores.length-1;j>=0;j--)
+			{
+				if(Score <= HighScores[j])
+				{	
+					MaxPos = j+1;	
+					break;
+				}
+			}
+			//Insert the new value and move the value ahead.
+			for(var k=HighScores.length-1;k>MaxPos;k--)
+			{
+				HighScores[k] = HighScores[k-1];
+				PlayerNames[k] = PlayerNames[k-1];
+			}
+			if(MaxPos<=10)
+			{
+				HighScores[MaxPos] = Score;
+				PlayerNames[MaxPos] = Name;	
+			}	
+		}	
+	}
+	for(var i =0;i<HighScores.length;i++)
+	{
+		var P1 = 'Player' + (i+1);
+		var S1 = 'Score' + (i+1);
+		document.getElementById(P1).innerHTML = HighScores[i];
+		document.getElementById(S1).innerHTML = PlayerNames[i];		
+	}
+}
+</script>
+
+<!--<p><h3 Style = 'text-align:center;'> High Scores</h3></p> -->
+
+<section style="display:table;margin-left:5%;width:90%;background-color:#30b4c9;margin-top:15%;">
+  <header style="display: table-row;">
+    <div style="display: table-cell;"><h3 style='text-align:center;'>Name</h3></div>
+    <div style="display: table-cell;"><h3 style='text-align:center;'>Score</h3></div>
+  </header>
+  <div style="display: table-row;background-color:#d5f0f4;">
+    <div class = 'CellElement' id='Player1' style="display: table-cell;text-align:center;"></div>
+    <div class = 'CellElement' id='Score1' style="display: table-cell;"></div>
+  </div>
+  <div style="display: table-row;background-color:#82d2de;">
+    <div class = 'CellElement' id='Player2' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score2' style="display: table-cell;"></div>
+  </div>
+  <div style="display: table-row;background-color:#d5f0f4;">
+    <div class = 'CellElement' id='Player3' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score3' style="display: table-cell;"></div>
+  </div>
+  <div style="display: table-row;background-color:#82d2de;">
+    <div class = 'CellElement' id='Player4' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score4' style="display: table-cell;"></div>
+  </div>
+  <div style="display: table-row;background-color:#d5f0f4;">
+    <div class = 'CellElement' id='Player5' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score5' style="display: table-cell;"></div>
+  </div>  
+  <div style="display: table-row;background-color:#82d2de;">
+    <div class = 'CellElement' id='Player6' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score6' style="display: table-cell;"></div>
+  </div> 
+  <div style="display: table-row;background-color:#d5f0f4;">
+    <div class = 'CellElement' id='Player7' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score7' style="display: table-cell;"></div>
+  </div> 
+  <div style="display: table-row;background-color:#82d2de;">
+    <div class = 'CellElement' id='Player8' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score8' style="display: table-cell;"></div>
+  </div>   
+  <div style="display: table-row;background-color:#d5f0f4;">
+    <div class = 'CellElement' id='Player9' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score9' style="display: table-cell;"></div>
+  </div> 
+  <div style="display: table-row;background-color:#82d2de;">
+    <div class = 'CellElement' id='Player10' style="display: table-cell;"></div>
+    <div class = 'CellElement' id='Score10' style="display: table-cell;"></div>
+  </div>   
+</section>
+
+<script>
+RetrieveHighScoresAndPopulate();
+</script>
+<br/>
+<div class = 'Submit' style = 'float:top;height:15%;max-height:15%;margin-top:2%;display:block'>
+<a onclick = "logout()" style="margin-left:30%";class = 'Button' id = 'Submit'><IMG style="width:25%;height:100%;max-width:100%;max-height:100%;" src = 'Submit.png' /> </a>
+</div>
+</body>
+</html>
