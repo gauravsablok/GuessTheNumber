@@ -4,12 +4,6 @@
 <script src="phonegap.js"></script>    
 <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
 <script type="text/javascript" charset="utf-8">
-
-<script>
-function callNewPage(PageName)
-{
-	window.location = PageName + '.html';
-}
 function onDeviceReady() 
 {
     // Register the event listener
@@ -18,8 +12,18 @@ function onDeviceReady()
 // Handle the back button
 function onBackKeyDown() 
 {
-	logout();
+    if (confirm("Logout?") == true) 
+	{
+       navigator.app.exitApp();
+    }	
 }
+</script>
+<script>
+function callNewPage(PageName)
+{
+	window.location = PageName + '.html';
+}
+
 function logout()
 {
     if (confirm("Logout?") == true) 
