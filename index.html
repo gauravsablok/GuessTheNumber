@@ -14,11 +14,7 @@ function onDeviceReady()
 // Handle the back button
 function onBackKeyDown() 
 {
-    if (confirm("Logout?") == true) 
-	{
-	   document.removeEventListener("backbutton", onBackKey, false);
-       navigator.app.exitApp();
-    }	
+	logout();
 }
 </script>
 <script>
