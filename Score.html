@@ -50,7 +50,7 @@ function RetrieveScore()
 }
 function UpdatePlayerName()
 {
-	var value = window.localStorage.getItem("HighScore");//Full Array
+	var value = window.localStorage.getItem("HighScore2912");//Full Array
 	var ScoreArr = new Array();
 	ScoreArr = value.split(';');//Splitted full Array
 	var CurrentPlayer = ScoreArr[ScoreArr.length-1];//Name + Score
@@ -65,13 +65,13 @@ function UpdatePlayerName()
 }
 </script>
 
-<div class = 'Name' style = 'float:top;height:10%;max-height:10%;margin-top:2%;padding-top:6%;display:block'>
+<div class = 'Name' style = 'float:top;height:10%;min-height:10%;max-height:10%;margin-top:2%;padding-top:6%;display:block'>
 <b>Name:</b>
 <input class = 'PlayerName' id= 'PN' type = "text" placeholder = 'Player1' value = 'Player1' maxlength="10"/>
 </span>
 </div>
 
-<div class = 'ScoreBreakUp' style = 'float:top;height:20%;max-height:20%;margin-top:1%;display:block'>
+<div class = 'ScoreBreakUp' style = 'float:top;height:25%;min-height:25%;max-height:25%;margin-top:1%;display:block'>
 	<section style="display: table;">
 	<div style="display: table-row;">
 		<b style='display: table-cell;'>Base Score:</b>
@@ -88,7 +88,7 @@ function UpdatePlayerName()
 	</section>
 </div>
 
-<div class = 'Score' style = 'float:top;height:20%;max-height:20%;margin-top:2%;display:block'>
+<div class = 'Score' style = 'float:top;min-height:20%;height:20%;max-height:20%;margin-top:2%;display:block'>
 <b>Total Score:</b>
 <input type = 'button' class = 'Button' id = 'ScoreButton' />
 </div>
