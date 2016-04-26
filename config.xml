@@ -26,6 +26,7 @@
               <icon src="icon.png" density="xhdpi" />
      </platform>
 
+	 <preference name="orientation" value="portrait" />
 	
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
