@@ -5,6 +5,7 @@
 <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
 <script type="text/javascript" charset="utf-8">
 
+var BackBtnPress = 0;
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() 
 {
@@ -14,6 +15,7 @@ function onDeviceReady()
 // Handle the back button
 function onBackKeyDown() 
 {
+	BackBtnPress = BackBtnPress + 1;
 	logout();
 }
 </script>
@@ -25,10 +27,17 @@ function callNewPage(PageName)
 
 function logout()
 {
-    if (confirm("Logout?") == true) 
+    if(BackBtnPress >= 2)
+		navigator.app.exitApp();
+		
+	if (confirm("Logout?") == true) 
 	{
        navigator.app.exitApp();
     }	
+	else
+	{
+		BackBtnPress = 0;
+	}
 	
 }
 </script>
