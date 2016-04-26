@@ -728,8 +728,8 @@ function SetRedOutlines()
 	{
 		document.getElementById('NextButton').value = 'NEXT';
 	}
-	document.getElementById('ErrorDiv').style.display = 'block';
 	document.getElementById('ErrorDiv').className = 'AnimateDiv';
+	document.getElementById('ErrorDiv').style.display = 'block';
 }
 function SetGreenOutlines()
 {
@@ -800,10 +800,7 @@ function SubmitScore()
 	z-index:99;
 	width:100%;
 	height:80%;
-	background: -webkit-linear-gradient(bottom, rgba(77,77,77,1), rgba(77,77,77,0.1)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, rgba(77,77,77,1), rgba(77,77,77,0.1)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, rgba(77,77,77,1), rgba(77,77,77,0.1))); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, rgba(77,77,77,1), rgba(77,77,77,0.1)); /* Standard syntax (must be last) */
+    background: linear-gradient(to bottom, rgba(77,77,77,1), rgba(77,77,77,0.1));
 }
 .AnimateDiv
 {
@@ -811,10 +808,13 @@ animation-name: SlideIn;
 animation-duration:2s;
 animation-timing-function: linear;
 animation-iteration-count: 1;
+opacity:0;
+animation-fill-mode: forwards; 
+animation-delay:3s;
 }
 @keyframes SlideIn 
 {
-	from   {bottom:100%;opacity:0.1;}
+	from  {bottom:100%;opacity:0.1;}
     to  {bottom:20%;opacity:1;}
 }
 }
