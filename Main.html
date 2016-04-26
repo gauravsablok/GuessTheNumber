@@ -715,8 +715,6 @@ function SetRedOutlines()
 		if(ReadOnlyNo.indexOf(i) != -1)
 			document.getElementById('N' + i).style.backgroundColor = "#ff4d4d";
 	}
-	document.getElementById('ErrorDiv').style.display = 'block';
-	document.getElementById('ErrorDiv').className = 'AnimateDiv';
 	document.getElementById('ErrorMsg').style.color = '#d33f3f';
 	if(TimeLimit == 0)
 		document.getElementById('ErrorMsg').innerHTML = "Time's Up.";
@@ -725,15 +723,13 @@ function SetRedOutlines()
 	if(GridCount > 10)
 	{
 		document.getElementById('NextButton').value = 'FINISH';
-		document.getElementById('NextButton').style.display = 'inline';	
 	}
 	else
 	{
 		document.getElementById('NextButton').value = 'NEXT';
-		document.getElementById('NextButton').style.display = 'inline';
 	}
-	//OutLineTimeLimit = 4;
-	//CountDownTimer = setInterval('timer1()',1000);
+	document.getElementById('ErrorDiv').style.display = 'block';
+	document.getElementById('ErrorDiv').className = 'AnimateDiv';
 }
 function SetGreenOutlines()
 {
@@ -746,22 +742,19 @@ function SetGreenOutlines()
 		if(ReadOnlyNo.indexOf(i) != -1)
 			document.getElementById('N' + i).style.backgroundColor = "#B4EEB4";
 	}
-	document.getElementById('ErrorDiv').className = 'AnimateDiv';
-	document.getElementById('ErrorDiv').style.display = 'block';
+	
 	document.getElementById('ErrorMsg').style.color = '#6fcc9f';
 	document.getElementById('ErrorMsg').innerHTML = 'Well Done!';
 	if(GridCount > 10)
 	{
 		document.getElementById('NextButton').value = 'FINISH';
-		document.getElementById('NextButton').style.display = 'inline';	
 	}
 	else
 	{
 		document.getElementById('NextButton').value = 'NEXT';
-		document.getElementById('NextButton').style.display = 'inline';
 	}
-	//OutLineTimeLimit = 2;
-	//CountDownTimer = setInterval('timer1()',1000);	
+	document.getElementById('ErrorDiv').className = 'AnimateDiv';
+	document.getElementById('ErrorDiv').style.display = 'block';
 }
 function SubmitScore()
 {
@@ -817,6 +810,7 @@ function SubmitScore()
 animation-name: SlideIn;
 animation-duration:2s;
 animation-timing-function: linear;
+animation-iteration-count: 1;
 }
 @keyframes SlideIn 
 {
@@ -898,9 +892,9 @@ display:block;
 <body>
 
 <div id = 'ErrorDiv'>
-	<p id = 'ErrorMsg' style = 'font-weight:bold;font-size:2em;text-align:center;'>OOPS</p>
-	<div style = "height:20%;max-height:20%;display:block;float:bottom;padding-top:40%;">
-		<input id = 'NextButton' type= 'button' onclick = "ResetVariables()" value = 'NEXT' style='display:none;background:"#7EC0EE";font:"#c0ee7e";font-size:3em;'/>
+	<p id = 'ErrorMsg' style = 'font-weight:bold;font-size:2em;text-align:center;'></p>
+	<div style = "height:20%;max-height:20%;float:top;padding-top:40%;">
+		<input id = 'NextButton' type= 'button' onclick = "ResetVariables()" value = 'NEXT' style='background:"#7EC0EE";font:"#c0ee7e";font-size:3em;'/>
 	</div>
 </div>
 
