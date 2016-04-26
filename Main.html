@@ -12,7 +12,6 @@ var NumberValue = [];
 var TimeLimit; var CountDownTimer; var OutLineTimeLimit;
 var ReadOnlyNo =new Array();
 var WrongAnswer = 0;
-var BackBtnPress = 0;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() 
@@ -23,21 +22,13 @@ function onDeviceReady()
 }
 function BackButtonPress()
 {
-	BackBtnPress = BackBtnPress + 1;
 	logout();
 }
 function logout()
 {
-	if(BackBtnPress >=2)
-		window.location = 'index.html';
-		
 	if (confirm("Quit Game? Current Progress will be lost.") == true) 
 	{
 		window.location = 'index.html';
-	}
-	else
-	{
-		BackBtnPress = 0;
 	}
 }
 
