@@ -141,33 +141,33 @@ function generateNumbers()
 	else if(Level == 2)
 		TimeLimit = 15;
 	else if(Level == 3)
-		TimeLimit = 20;
+		TimeLimit = 30;
 	else if(Level == 4)
-		TimeLimit = 20;
+		TimeLimit = 30;
 	else if(Level == 5)
-		TimeLimit = 25;
+		TimeLimit = 30;
 	else if(Level == 6)
-		TimeLimit = 35;
+		TimeLimit = 30;
 	else if(Level == 7)
 		TimeLimit = 45;
 	else if(Level == 8)
-		TimeLimit = 55;
+		TimeLimit = 45;
 	else if(Level == 9)
 		TimeLimit = 55;
 	else
 		TimeLimit = 60;
 		
 	SetReadOnly();
-	if(Level <= 4)
+	if(Level <= 6)
 	{
 		generateNumbersEasy(1,9);
 	}
-	else if (Level <= 8)
+	else if (Level <= 9)
 	{
 		generateNumbersEasy(1,20);
 	}
 	else
-		generateNumbersEasy(1,40);
+		generateNumbersEasy(1,30);
 }
 function generateNumbersEasy(MinRange,MaxRange)
 {
@@ -719,7 +719,7 @@ function SetRedOutlines()
 		if(ReadOnlyNo.indexOf(i) != -1)
 			document.getElementById('N' + i).style.backgroundColor = "#ff4d4d";
 	}
-	document.getElementById('ErrorMsg').style.color = '#d33f3f';
+	document.getElementById('ErrorMsg').style.color = '#ef4b4b';
 	if(TimeLimit == 0)
 		document.getElementById('ErrorMsg').innerHTML = "Time's Up.";
 	else
@@ -851,7 +851,7 @@ display:block;
 .TxtTimer
 {
 	width:30%;
-	height:100%;
+	height:110%;
 	overflow:hidden;
 	background-color:#DADADA;
 	font-weight:bold;
@@ -966,8 +966,8 @@ display:block;
 </div>
 <!-- 3x3 grid ends -->
 </div>
-<div id = 'SubmitButtonDiv' style = "height:10%;max-height:10%;display:block;float:top;">
-	<a onclick = "SubmitButton()" class = 'Button' id = 'Submit' style="margin-left:42%"><IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Submit.png' /> </a>
+<div id = 'SubmitButtonDiv' style = "height:18%;max-height:18%;display:block;float:top;text-align:center;">
+	<a onclick = "SubmitButton()" class = 'Button' id = 'Submit'><IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Submit.png' /> </a>
 </div>
  <script>
 	SubmitScore();//Main Function

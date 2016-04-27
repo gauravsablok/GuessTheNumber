@@ -37,20 +37,20 @@ function logout()
 </head>
 <body>
 
-<div class = 'Container'>
+<div class = 'Container' style= "display:block;">
 	
 	<!--Filler Div-->
-	<div style="display:block;width:100%;height:3%;float:top;">
+	<div style="display:block;height:3%;float:top;">
 	</div>
 	
 	<!-- Header to be used across all screens-->
-	<div class = 'Header' style = 'float:top; width:100%;height:20%;max-height:20%;margin-top:0;display:block'>
+	<div class = 'Header' style = 'float:top; height:20%;max-height:20%;margin-top:0%;display:block'>
 		<!--Blank Space -->
 		<div style = "display:block;width:80%;float:left">
 		</div>
 		<!--Exit Button Image -->
 		<div style = "display:block;width:20%;height:100%;float:right;">
-			<a onclick = "logout()"><IMG style="width:auto;height:auto;max-width:80%;max-height:80%;" src = 'logout.png' /> </a>
+			<a onclick = "logout()"><IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'logout.png' /> </a>
 		</div>
 	</div>
 	
@@ -59,8 +59,8 @@ function logout()
 	</div>
 
 	<!--To start the game-->
-	<div style = "height:25%;max-height:25%;display:block;float:top;">
-		<div style="display:block;float:left;margin-left:33%;margin-right:30%;width:100%;height:100%;">
+	<div style = "height:25%;max-height:25%;display:block;float:top;text-align:center;">
+		<div style="display:block;float:top;height:100%;">
 			<IMG onclick = "callNewPage('Main')" style = "width:auto;height:autos;max-width:100%;max-height:100%;" src = 'Play.png' />
 		</div>
 	</div>
@@ -70,8 +70,8 @@ function logout()
 	</div>
 	
 	<!--Medals Button Image-->
-	<div style="height:25%;max-height:25%;float:top;">
-		<div style="display:block;float:left;margin-left:33%;margin-right:30%;width:100%;height:100%;">
+	<div style="height:25%;max-height:25%;float:top;text-align:center;">
+		<div style="display:block;float:top;height:100%;">
 			<IMG onclick = "callNewPage('Medals')" style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Medals.png' />
 		</div>			
 	</div>
