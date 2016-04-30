@@ -22,6 +22,21 @@
 		width:100%;
 		font-size:90%;
 	}
+	.TrophyDiv
+	{
+		animation-name: SlideIn;
+		animation-duration:0.4s;
+		animation-timing-function: linear;
+		animation-iteration-count: 15;
+		opacity:0;
+		animation-fill-mode: forwards; 
+		animation-delay:0.1s;
+	}
+	@keyframes SlideIn 
+	{
+		from  {opacity:0;}
+		to 	  {opacity:1;}
+	}
 </style>
 <script>
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -53,8 +68,22 @@ function RetrieveScore()
 	document.getElementById('ScoreButton').value = Score;//Total Score
 	document.getElementById('TimeBonus').value = TimeBonus;
 	document.getElementById('LevelBonus').value = LevelBonus;
-	
 	document.getElementById('PN').value = Name;
+	var HighScore = 1;
+	for(var i=0;i<ScoreArr.length-1;i++)
+	{
+		var Player = ScoreArr[i];
+		if(parseInt(Player.substring(Player.lastIndexOf(',') + 1)) > parseInt(Score))
+		{
+			HighScore = 0;
+		}
+	}
+	if(HighScore >  0)
+	{
+		document.getElementById('TrophyDivCont').style.display = 'inline-block';
+		document.getElementById('Trophy').className = 'TrophyDiv';
+	}	
+
 	//alert(Score);
 	
 }
@@ -67,7 +96,6 @@ function UpdatePlayerName()
 	var n = CurrentPlayer.lastIndexOf(',');
 	var Score = CurrentPlayer.substring(n + 1);//Score only
 	var PlayerName = document.getElementById('PN').value;
-	
 	ScoreArr[ScoreArr.length-1] =  PlayerName + ',' + Score;
 	value = ScoreArr.join(";");
 	window.localStorage.setItem("HighScore2912", value);
@@ -81,7 +109,8 @@ function UpdatePlayerName()
 </span>
 </div>
 
-<div class = 'ScoreBreakUp' style = 'float:top;margin-top:10%;display:block'>
+<div class = 'ScoreBreakUp' style = 'float:top;margin-top:10%;display:inline-block;width:100%;'>
+	<div style="width:50%;max-width:50%;float:left;">
 	<section style="display: table;">
 	<div style="display: table-row;">
 		<b style='display: table-cell;'>Base Score:</b>
@@ -96,9 +125,18 @@ function UpdatePlayerName()
 		<input  type = 'button' class = 'BreakUpButton' id = 'LevelBonus' />
 	</div>
 	</section>
+	</div>
+	<div id = 'TrophyDivCont' style= 'width:40%;max-width:50%;display:none;float:right;'>
+	<div id = 'Trophy' style="position:fixed;width:40%;max-width:50%;">
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Trophy.jpg' />
+	</div>
+	<div id = "Trophy1 style="position:fixed;width:40%;max-width:50%;">
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Trophy1.jpg' />
+	</div>
+	</div>
 </div>
 
-<div class = 'Score' style = 'float:top;margin-top:6%;display:block'>
+<div class = 'Score' style = 'float:top;margin-top:18%;display:block'>
 <section style="display: table;">
 <div style="display: table-row;">
 <b style='display: table-cell;'>Total Score:</b>

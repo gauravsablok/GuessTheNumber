@@ -1,5 +1,158 @@
 <html>
 <head>
+<style>
+.BounceNumbers
+{
+	width:10%;
+	height:9%;
+	position:fixed;
+}
+#Number1
+{
+animation-name: MoveAcross1;
+animation-duration:18s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross1
+{
+  0%, 100% {opacity:0.6;margin-top:15%;margin-left:5%;}
+  10%, 90% {opacity:0.2; margin-top:5%;margin-left:25%;}
+  20%, 80% {opacity:0.2;margin-top:0%;margin-left:45%;}
+  30%, 70% {opacity:0.2;margin-top:5%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:10%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:15%;margin-left:95%;}
+}
+#Number2
+{
+animation-name: MoveAcross2;
+animation-duration:22s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross2
+{
+  0%, 100% {opacity:0.6;margin-top:25%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:0%;margin-left:25%;}
+  20%, 80% {opacity:0.2;margin-top:15%;margin-left:45%;}
+  30%, 70% {opacity:0.2;margin-top:25%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:30%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:35%;margin-left:95%;}
+}
+#Number3
+{
+animation-name: MoveAcross3;
+animation-duration:24s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross3
+{
+  0%, 100% {opacity:0.6;margin-top:35%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:25%;margin-left:25%;}
+  20%, 80% {opacity:0.1;margin-top:55%;margin-left:45%;}
+  30%, 70% {opacity:0.1;margin-top:65%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:40%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:80%;margin-left:95%;}
+}
+#Number4
+{
+animation-name: MoveAcross4;
+animation-duration:16s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross4
+{
+  0%, 100% {opacity:0.6; margin-top:50%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:65%;margin-left:25%;}
+  20%, 80% {opacity:0.4;margin-top:35%;margin-left:45%;}
+  30%, 70% {opacity:0.1;margin-top:25%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:20%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:45%;margin-left:95%;}
+}
+#Number5
+{
+animation-name: MoveAcross5;
+animation-duration:19s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross5
+{
+  0%, 100% {opacity:0.6;margin-top:60%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:55%;margin-left:25%;}
+  20%, 80% {opacity:0.1;margin-top:45%;margin-left:45%;}
+  30%, 70% {opacity:0.3;margin-top:15%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:25%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:55%;margin-left:95%;}
+}
+#Number6
+{
+animation-name: MoveAcross6;
+animation-duration:16s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross6
+{
+  0%, 100% {opacity:0.6;margin-top:80%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:105%;margin-left:25%;}
+  20%, 80% {opacity:0.1;margin-top:115%;margin-left:45%;}
+  30%, 70% {opacity:0.4;margin-top:105%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:95%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:85%;margin-left:85%;}
+}
+#Number7
+{
+animation-name: MoveAcross7;
+animation-duration:21s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross7
+{
+  0%, 100% {opacity:0.6;margin-top:85%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:120%;margin-left:25%;}
+  20%, 80% {opacity:0.1;margin-top:135%;margin-left:45%;}
+  30%, 70% {opacity:0.5;margin-top:145%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:140%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:110%;margin-left:95%;}
+}
+#Number8
+{
+animation-name: MoveAcross8;
+animation-duration:23s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross8
+{
+  0%, 100% {opacity:0.6;margin-top:124%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:135%;margin-left:25%;}
+  20%, 80% {opacity:0.1;margin-top:125%;margin-left:45%;}
+  30%, 70% {opacity:0.0;margin-top:100%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:110%;margin-left:85%;}
+  50%      {opacity:0.6;margin-top:140%;margin-left:95%;}
+}
+#Number9
+{
+animation-name: MoveAcross9;
+animation-duration:20s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count: infinite;
+}
+@keyframes MoveAcross9
+{
+  0%, 100% {opacity:0.6;margin-top:130%;margin-left:5%;}
+  10%, 90% {opacity:0.3;margin-top:115%;margin-left:25%;}
+  20%, 80% {opacity:0.4;margin-top:85%;margin-left:45%;}
+  30%, 70% {opacity:0.4;margin-top:105%;margin-left:65%;}
+  40%, 60% {opacity:0.3;margin-top:95%;margin-left:85%;}
+  50%      {opacity:0.1;margin-top:125%;margin-left:95%;}
+}
+
+</style>
 <script src="Clicks.js"></script>
 <script src="phonegap.js"></script>    
 <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
@@ -37,6 +190,36 @@ function logout()
 </head>
 <body>
 
+<div class = 'BounceNumberContainer' style='display:inline-block;position:absolute;margin-top:7%;z-index:-1;'>
+	<div class = 'BounceNumbers' id = 'Number1'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-2;border-radius: 50%;" src = '1.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number2'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-3;border-radius: 50%;" src = '2.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number3'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-4;border-radius: 50%;" src = '3.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number4'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-5;border-radius: 50%;" src = '4.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number5'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-6;border-radius: 50%;" src = '5.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number6'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-7;border-radius: 50%;" src = '6.png' />
+	</div>	
+	<div class = 'BounceNumbers' id = 'Number7'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-8;border-radius: 50%;" src = '7.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number8'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-9;border-radius: 50%;" src = '8.png' />
+	</div>
+	<div class = 'BounceNumbers' id = 'Number9'>
+		<IMG style="width:auto;height:auto;max-width:100%;max-height:100%;z-index:-10;border-radius: 50%;" src = '9.png' />
+	</div>
+</div>
+
 <div class = 'Container' style= "display:block;">
 	
 	<!--Filler Div-->
@@ -50,7 +233,7 @@ function logout()
 		</div>
 		<!--Exit Button Image -->
 		<div style = "display:block;width:20%;height:100%;float:right;">
-			<a onclick = "logout()"><IMG style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'logout.png' /> </a>
+			<a onclick = "logout()"><IMG style="width:auto;height:auto;max-width:100%;max-height:100%;border-radius: 50%;" src = 'logout.png' /> </a>
 		</div>
 	</div>
 	
@@ -61,7 +244,7 @@ function logout()
 	<!--To start the game-->
 	<div style = "height:25%;max-height:25%;display:block;float:top;text-align:center;">
 		<div style="display:block;float:top;height:100%;">
-			<IMG onclick = "callNewPage('Main')" style = "width:auto;height:autos;max-width:100%;max-height:100%;" src = 'Play.png' />
+			<IMG onclick = "callNewPage('Main')" style = "width:auto;height:autos;max-width:100%;max-height:100%;border-radius: 50%;" src = 'Play.png' />
 		</div>
 	</div>
 	
@@ -72,7 +255,7 @@ function logout()
 	<!--Medals Button Image-->
 	<div style="height:25%;max-height:25%;float:top;text-align:center;">
 		<div style="display:block;float:top;height:100%;">
-			<IMG onclick = "callNewPage('Medals')" style="width:auto;height:auto;max-width:100%;max-height:100%;" src = 'Medals.png' />
+			<IMG onclick = "callNewPage('Medals')" style="width:auto;height:auto;max-width:100%;max-height:100%;border-radius: 50%;" src = 'Medals.png' />
 		</div>			
 	</div>
 
