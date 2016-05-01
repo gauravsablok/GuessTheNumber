@@ -38,7 +38,7 @@ function RetrieveHighScoresAndPopulate()
 		var CurrentPlayer = ScoreArr[i];//Name + Score
 		
 		var n = CurrentPlayer.lastIndexOf(',');
-		var Score = CurrentPlayer.substring(n + 1);//Score only
+		var Score = parseInt(CurrentPlayer.substring(n + 1));//Score only
 		var Name = CurrentPlayer.split(',',1);//Name Only
 
 		
@@ -90,23 +90,28 @@ function RetrieveHighScoresAndPopulate()
 		}
 		else
 		{
-			var MaxPos = 0;
+			var MaxPos = 10;
 			for(var j=HighScores.length-1;j>=0;j--)
 			{
-				if(Score <= HighScores[j])
+				if(Score > HighScores[0])
+				{
+					MaxPos = 0;
+					break;
+				}
+				else if(Score <= HighScores[j])
 				{	
 					MaxPos = j+1;	
 					break;
 				}
 			}
 			//Insert the new value and move the value ahead.
-			for(var k=HighScores.length-1;k>MaxPos;k--)
+			if(MaxPos<=9)
 			{
-				HighScores[k] = HighScores[k-1];
-				PlayerNames[k] = PlayerNames[k-1];
-			}
-			if(MaxPos<=10)
-			{
+				for(var k=HighScores.length-1;k>MaxPos;k--)
+				{
+					HighScores[k] = HighScores[k-1];
+					PlayerNames[k] = PlayerNames[k-1];
+				}
 				HighScores[MaxPos] = Score;
 				PlayerNames[MaxPos] = Name;	
 			}	
@@ -116,8 +121,8 @@ function RetrieveHighScoresAndPopulate()
 	{
 		var P1 = 'Player' + (i+1);
 		var S1 = 'Score' + (i+1);
-		document.getElementById(P1).innerHTML = HighScores[i];
-		document.getElementById(S1).innerHTML = PlayerNames[i];		
+		document.getElementById(P1).innerHTML = PlayerNames[i];
+		document.getElementById(S1).innerHTML = HighScores[i];		
 	}
 }
 </script>
