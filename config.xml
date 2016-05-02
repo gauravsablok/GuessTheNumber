@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.SablokEnt.GuessTheNumber"
-    versionCode = "12"
-    version     = "1.0.3" >
+    versionCode = "13"
+    version     = "1.0.4" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -27,6 +27,7 @@
      </platform>
 
 	 <preference name="orientation" value="portrait" />
+	 <preference name="android-minSdkVersion" value="16" />
 	
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
