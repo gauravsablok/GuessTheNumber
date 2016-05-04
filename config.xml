@@ -38,8 +38,8 @@
 	</platform>
 	 
 	 <preference name="orientation" value="portrait" />
-	 <preference name="SplashScreen" value="splash.png" />
-	 <preference name="SplashScreenDelay" value="3000"/> 
+	<!-- <preference name="SplashScreen" value="splash.png" />-->
+	 <preference name="SplashScreenDelay" value="2500"/> 
 	 <preference name="android-minSdkVersion" value="16" />
 	 <preference name="AutoHideSplashScreen" value="false" />
 	 <preference name="FadeSplashScreen" value="true"/>
