@@ -27,6 +27,9 @@
      </platform>
 
 	 <preference name="orientation" value="portrait" />
+	 <preference name="SplashScreen" value="splash" />
+	 <preference name="SplashScreenDelay" value="800"/> 
+	 <preference name="android-minSdkVersion" value="16" />
 	 
 	<splash src="splash.png"/>
 	<splash src="sldpi.png" platform="android" qualifier="ldpi" />
@@ -35,9 +38,6 @@
 	<splash src="sxhdpi.png" platform="android" qualifier="xhdpi" />
 	<splash src="sxxhdpi.png" platform="android" qualifier="xxhdpi" />
 	<splash src="sxxxhdpi.png" platform="android" qualifier="xxxhdpi" />
-	
-	<preference name="SplashScreenDelay" value="800"/> 
-	<preference name="android-minSdkVersion" value="16" />
 	
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
