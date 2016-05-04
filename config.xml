@@ -26,19 +26,27 @@
               <icon src="icon.png" density="xhdpi" />
      </platform>
 
-	 <preference name="orientation" value="portrait" />
-	 <preference name="SplashScreen" value="splash" />
-	 <preference name="SplashScreenDelay" value="800"/> 
-	 <preference name="android-minSdkVersion" value="16" />
+	<platform name="android">
+		<splash src="splash.png"/>
+		<splash src="sldpi.png" platform="android" qualifier="ldpi" />
+		<splash src="smdpi.png" platform="android" qualifier="mdpi" />
+		<splash src="shdpi.png" platform="android" qualifier="hdpi" />
+		<splash src="sxhdpi.png" platform="android" qualifier="xhdpi" />
+		<splash src="sxxhdpi.png" platform="android" qualifier="xxhdpi" />
+		<splash src="sxxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+	</platform>
 	 
-	<splash src="splash.png"/>
-	<splash src="sldpi.png" platform="android" qualifier="ldpi" />
-	<splash src="smdpi.png" platform="android" qualifier="mdpi" />
-	<splash src="shdpi.png" platform="android" qualifier="hdpi" />
-	<splash src="sxhdpi.png" platform="android" qualifier="xhdpi" />
-	<splash src="sxxhdpi.png" platform="android" qualifier="xxhdpi" />
-	<splash src="sxxxhdpi.png" platform="android" qualifier="xxxhdpi" />
-	
+	 <preference name="orientation" value="portrait" />
+	 <preference name="SplashScreen" value="splash.png" />
+	 <preference name="SplashScreenDelay" value="3000"/> 
+	 <preference name="android-minSdkVersion" value="16" />
+	 <preference name="AutoHideSplashScreen" value="false" />
+	 <preference name="FadeSplashScreen" value="true"/>
+	 <preference name="FadeSplashScreenDuration" value="1000"/>
+	 <preference name="SplashMaintainAspectRatio" value="true" />
+	 <preference name="SplashShowOnlyFirstTime" value="false" />
+	 
+
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
 
