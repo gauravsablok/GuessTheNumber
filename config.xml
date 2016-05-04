@@ -50,5 +50,5 @@
 
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
-
+	<plugin name="cordova-plugin-splashscreen" spec="2.1.0" source="pgb" />
 </widget>
