@@ -151,23 +151,27 @@ function generateNumbers()
 	else if(Level == 7)
 		TimeLimit = 45;
 	else if(Level == 8)
-		TimeLimit = 45;
+		TimeLimit = 60;
 	else if(Level == 9)
-		TimeLimit = 55;
+		TimeLimit = 60;
 	else
 		TimeLimit = 60;
 		
 	SetReadOnly();
-	if(Level <= 6)
-	{
-		generateNumbersEasy(1,9);
-	}
-	else if (Level <= 9)
-	{
+	if(Level == 2)
 		generateNumbersEasy(1,20);
-	}
-	else
+	else if(Level == 3)
+		generateNumbersEasy(1,20);		
+	else if(Level <= 4)
+		generateNumbersEasy(1,9);
+	else if (Level <= 5)
+		generateNumbersEasy(1,20);
+	else if (Level <= 8)
 		generateNumbersEasy(1,30);
+	else if	(Level <= 9)
+			generateNumbersEasy(1,40);
+	else
+		generateNumbersEasy(1,60);
 }
 function generateNumbersEasy(MinRange,MaxRange)
 {
@@ -552,7 +556,7 @@ function RemoveReadOnly()
 	var ReadOnlyLen;
 	if (Level<=3)
 		ReadOnlyLen = Level;
-	else if (Level<=8)
+	else if (Level<=7)
 		ReadOnlyLen = 4;
 	else
 		ReadOnlyLen = 5;
@@ -699,7 +703,7 @@ function ValidateOutputAndSetScore()
 	else
 	{
 		Score = Score + 50;
-		TimeBonus = TimeBonus + parseInt(TimeLimit * 0.5); 
+		TimeBonus = TimeBonus + parseInt(TimeLimit*2);
 		LevelBonus = LevelBonus + parseInt(Level*10);
 		Level = Level + 1;
 		SetGreenOutlines();

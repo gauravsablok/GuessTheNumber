@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.SablokEnt.GuessTheNumber"
-    versionCode = "13"
-    version     = "1.0.4" >
+    versionCode = "15"
+    version     = "1.0.5" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -27,7 +27,17 @@
      </platform>
 
 	 <preference name="orientation" value="portrait" />
-	 <preference name="android-minSdkVersion" value="16" />
+	 
+	<splash src="splash.png"/>
+	<splash src="sldpi.png" platform="android" qualifier="ldpi" />
+	<splash src="smdpi.png" platform="android" qualifier="mdpi" />
+	<splash src="shdpi.png" platform="android" qualifier="hdpi" />
+	<splash src="sxhdpi.png" platform="android" qualifier="xhdpi" />
+	<splash src="sxxhdpi.png" platform="android" qualifier="xxhdpi" />
+	<splash src="sxxxhdpi.png" platform="android" qualifier="xxxhdpi" />
+	
+	<preference name="SplashScreenDelay" value="800"/> 
+	<preference name="android-minSdkVersion" value="16" />
 	
     <!-- Plugins -->
     <!--<plugin name="Storage" value="org.apache.cordova.Storage" />-->
