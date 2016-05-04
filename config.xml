@@ -20,23 +20,25 @@
 	<gap:platform name="android" />
 	
     <platform name="android">
-              <icon src="icon.png" density="ldpi" />
+              <icon src="icon.png" />
+			  <icon src="icon.png" density="ldpi" />
               <icon src="icon.png" density="mdpi" />
               <icon src="icon.png" density="hdpi" />
               <icon src="icon.png" density="xhdpi" />
      </platform>
 
 	<platform name="android">
-		<splash src="sldpi.png" density="ldpi" />
-		<splash src="smdpi.png" density="mdpi" />
-		<splash src="shdpi.png" density="hdpi" />
-		<splash src="sxhdpi.png" density="xhdpi" />
-		<splash src="sxxhdpi.png" density="xxhdpi" />
-		<splash src="sxxxhdpi.png" density="xxxhdpi" />
+		<splash src="splash.png" />
+		<splash src="ldpi.png" density="ldpi" />
+		<splash src="mdpi.png" density="mdpi" />
+		<splash src="hdpi.png" density="hdpi" />
+		<splash src="xhdpi.png" density="xhdpi" />
+		<splash src="xxhdpi.png" density="xxhdpi" />
+		<splash src="xxxhdpi.png" density="xxxhdpi" />
 	</platform>
 	 
 	 <preference name="orientation" value="portrait" />
-	 <!--<preference name="SplashScreen" value="splash.png" />-->
+	 <preference name="SplashScreen" value="splash.png" />
 	 <preference name="SplashScreenDelay" value="3000"/> 
 	 <preference name="android-minSdkVersion" value="16" />
 	 <preference name="AutoHideSplashScreen" value="false" />
