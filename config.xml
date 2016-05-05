@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.SablokEnt.GuessTheNumber"
-    versionCode = "15"
-    version     = "1.0.5" >
+    versionCode = "16"
+    version     = "1.0.6" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -18,6 +18,11 @@
     </author>
 
 	<gap:platform name="android" />
+	
+	<supports-screens 
+        android:smallScreens="false" />
+	</config-file>
+
 	
     <platform name="android">
               <icon src="icon.png" />
