@@ -19,10 +19,12 @@
 
 	<gap:platform name="android" />
 	
-	<config-file platform="android" parent="/manifest" mode="merge">
-    <supports-screens 
-        android:smallScreens="false" />
-	</config-file>
+	<supports-screens android:anyDensity="true" android:resizeable="true" 
+    android:smallScreens="true" 
+    android:normalScreens="true" 
+    android:largeScreens="true" 
+    android:xlargeScreens="true" />
+
 
 
 	
