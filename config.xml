@@ -19,7 +19,11 @@
 
 	<gap:platform name="android" />
 	
-	<supports-screens android:smallScreens="false" />
+	<config-file platform="android" parent="/manifest" mode="merge">
+    <supports-screens 
+        android:smallScreens="false" />
+	</config-file>
+
 
 	
     <platform name="android">
