@@ -19,9 +19,7 @@
 
 	<gap:platform name="android" />
 	
-	<supports-screens 
-        android:smallScreens="false" />
-	</config-file>
+	<supports-screens android:smallScreens="false" />
 
 	
     <platform name="android">
